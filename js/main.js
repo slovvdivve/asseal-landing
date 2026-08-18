@@ -106,30 +106,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Contact channel toggle
-  const channelTelegram = document.getElementById("channelTelegram");
-  const channelEmail = document.getElementById("channelEmail");
-  const panelTelegram = document.getElementById("panelTelegram");
-  const panelEmail = document.getElementById("panelEmail");
-
-  function setChannel(channel) {
-    const tgActive = channel === "telegram";
-    panelTelegram.classList.toggle("hidden", !tgActive);
-    panelEmail.classList.toggle("hidden", tgActive);
-    channelTelegram.classList.toggle("btn-primary", tgActive);
-    channelTelegram.classList.toggle("btn-ghost-dark", !tgActive);
-    channelEmail.classList.toggle("btn-primary", !tgActive);
-    channelEmail.classList.toggle("btn-ghost-dark", tgActive);
-    channelTelegram.setAttribute("aria-selected", String(tgActive));
-    channelEmail.setAttribute("aria-selected", String(!tgActive));
-  }
-  channelTelegram?.addEventListener("click", () => setChannel("telegram"));
-  channelEmail?.addEventListener("click", () => setChannel("email"));
-
-  // Email panel: build a mailto: link from the form fields.
+  // Contact form: build a mailto: link from the form fields.
   // NOTE: there is no backend yet (a custom admin panel is planned separately),
   // so this is a functional stopgap, not a silent form submission.
-  const emailForm = document.getElementById("panelEmail");
+  const emailForm = document.getElementById("contactForm");
   emailForm?.addEventListener("submit", (e) => {
     e.preventDefault();
     const name = emailForm.name.value.trim();
