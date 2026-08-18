@@ -1,4 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Hero background video: some in-app browsers (Telegram, Instagram, etc. on
+  // iOS) block autoplay even with muted+playsinline set as HTML attributes.
+  // Set muted as a JS property too (more reliably respected), try play(),
+  // and if the browser still blocks it, retry on the first tap/click anywhere.
+  const heroVideo = document.querySelector("section.bg-ink video");
+  if (heroVideo) {
+    heroVideo.muted = true;
+    heroVideo.setAttribute("webkit-playsinline", "true");
+    const tryPlay = () => heroVideo.play().catch(() => {});
+    tryPlay();
+    const resumeOnGesture = () => {
+      tryPlay();
+      document.removeEventListener("touchstart", resumeOnGesture);
+      document.removeEventListener("click", resumeOnGesture);
+    };
+    document.addEventListener("touchstart", resumeOnGesture, { once: true, passive: true });
+    document.addEventListener("click", resumeOnGesture, { once: true });
+  }
+
   // Mobile nav toggle
   const navToggle = document.getElementById("navToggle");
   const mobileNav = document.getElementById("mobileNav");
