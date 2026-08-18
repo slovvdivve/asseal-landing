@@ -313,6 +313,9 @@
   .h-full {
     height: 100%;
   }
+  .min-h-\[100svh\] {
+    min-height: 100svh;
+  }
   .w-2 {
     width: calc(var(--spacing) * 2);
   }
@@ -595,8 +598,8 @@
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
   }
-  .pt-24 {
-    padding-top: calc(var(--spacing) * 24);
+  .pt-20 {
+    padding-top: calc(var(--spacing) * 20);
   }
   .pr-8 {
     padding-right: calc(var(--spacing) * 8);
@@ -778,11 +781,17 @@
     .sm\:mb-6 {
       margin-bottom: calc(var(--spacing) * 6);
     }
+    .sm\:block {
+      display: block;
+    }
     .sm\:hidden {
       display: none;
     }
     .sm\:inline-flex {
       display: inline-flex;
+    }
+    .sm\:min-h-0 {
+      min-height: 0px;
     }
     .sm\:grid-cols-4 {
       grid-template-columns: repeat(4, minmax(0, 1fr));
