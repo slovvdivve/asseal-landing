@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Asseal — удостоверение документов в ОАЭ</title>
+<meta name="description" content="Консульские действия, легализация и нотариат в ОАЭ. Оформляем документы удалённо, без очередей и лишних поездок." />
+<link rel="icon" href="assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="dist/output.css" />
+</head>
+<body class="antialiased">
+
+<!-- ============ HEADER ============ -->
+<header class="fixed top-0 inset-x-0 z-50 bg-paper/90 backdrop-blur border-b border-paper-line">
+  <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-16 md:h-20">
+    <a href="#top" class="flex items-center gap-2 shrink-0">
+      <img src="assets/logo.png" alt="Asseal" class="h-6 md:h-7 w-auto" />
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 font-body text-sm text-ink">
+      <a href="#services" data-i18n="nav.services" class="hover:text-oxblood transition-colors">Услуги</a>
+      <a href="#process" data-i18n="nav.process" class="hover:text-oxblood transition-colors">Как это работает</a>
+      <a href="#about" data-i18n="nav.about" class="hover:text-oxblood transition-colors">О нас</a>
+      <a href="#faq" data-i18n="nav.faq" class="hover:text-oxblood transition-colors">Вопросы</a>
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <button id="langToggle" type="button" class="font-mono text-xs tracking-widest border border-paper-line rounded-sm px-2.5 py-1 hover:border-brass transition-colors" aria-label="Switch language">
+        <span id="langToggleLabel">EN</span>
+      </button>
+      <a href="#contact" data-i18n="nav.cta" class="hidden sm:inline-flex btn-primary !py-2.5 !px-4 !text-sm">Оставить заявку</a>
+      <button id="navToggle" type="button" class="md:hidden p-2 -mr-2" aria-label="Открыть меню" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 6h18M2 11h18M2 16h18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- mobile nav -->
+  <nav id="mobileNav" class="md:hidden hidden border-t border-paper-line bg-paper">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4 font-body text-sm">
+      <a href="#services" data-i18n="nav.services">Услуги</a>
+      <a href="#process" data-i18n="nav.process">Как это работает</a>
+      <a href="#about" data-i18n="nav.about">О нас</a>
+      <a href="#faq" data-i18n="nav.faq">Вопросы</a>
+      <a href="#contact" data-i18n="nav.cta" class="btn-primary justify-center">Оставить заявку</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="relative bg-ink text-paper pt-32 pb-24 md:pt-40 md:pb-28 overflow-hidden">
+  <div class="absolute inset-0">
+    <video class="w-full h-full object-cover" autoplay muted loop playsinline preload="auto">
+      <source src="assets/hero-dubai.mp4" type="video/mp4" />
+    </video>
+    <div class="absolute inset-0 bg-ink/70"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-ink/40 via-transparent to-ink/80"></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-6 relative">
+
+    <p class="eyebrow eyebrow-light mb-6" data-i18n="hero.eyebrow">Asseal Legal Consultancy · Ras Al Khaimah, UAE</p>
+
+    <h1 class="font-display font-normal text-[2.5rem] leading-[1.08] md:text-6xl md:leading-[1.05] max-w-2xl" data-i18n="hero.h1">
+      Мы возьмём на себя формальности.
+    </h1>
+    <p class="font-display italic text-2xl md:text-3xl mt-3 text-brass-light" data-i18n="hero.h2">
+      Сосредоточьтесь на важном.
+    </p>
+
+    <p class="mt-8 max-w-xl text-stone-light text-lg leading-relaxed" data-i18n-html="hero.sub">
+      <strong class="text-paper">Asseal</strong> — решение для удостоверения документов в ОАЭ. Мы позаботимся о мелочах, чтобы вы достигли главного.
+    </p>
+
+    <div class="mt-10 flex flex-col items-start sm:flex-row sm:items-center gap-4">
+      <a href="#contact" class="btn-primary" data-i18n="hero.ctaPrimary">Оставить заявку</a>
+
+      <!-- Desktop: bordered button -->
+      <a href="https://t.me/asseal_ae" target="_blank" rel="noopener" class="hidden sm:inline-flex btn-ghost-dark" data-i18n-html="hero.ctaSecondary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.05 3.16 2.9 10.36c-1.24.5-1.23 1.2-.23 1.5l4.66 1.46 1.8 5.6c.22.6.11.85.75.85.5 0 .72-.23.99-.5l2.37-2.31 4.73 3.5c.87.48 1.5.23 1.72-.8l3.1-14.7c.32-1.28-.48-1.86-1.74-1.3ZM8.4 13.1l9.4-5.9c.44-.27.85-.12.52.18l-7.9 7.2-.31 3.4-1.3-4.88Z"/></svg>
+        Написать в Telegram
+      </a>
+
+      <!-- Mobile: plain text + icon, no button chrome -->
+      <a href="https://t.me/asseal_ae" target="_blank" rel="noopener" class="sm:hidden inline-flex items-center gap-2 text-brass-light font-semibold text-sm" data-i18n-html="hero.ctaSecondary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.05 3.16 2.9 10.36c-1.24.5-1.23 1.2-.23 1.5l4.66 1.46 1.8 5.6c.22.6.11.85.75.85.5 0 .72-.23.99-.5l2.37-2.31 4.73 3.5c.87.48 1.5.23 1.72-.8l3.1-14.7c.32-1.28-.48-1.86-1.74-1.3ZM8.4 13.1l9.4-5.9c.44-.27.85-.12.52.18l-7.9 7.2-.31 3.4-1.3-4.88Z"/></svg>
+        Написать в Telegram
+      </a>
+    </div>
+
+    <!-- Stats: horizontal row below the CTAs -->
+    <dl class="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-10 max-w-2xl hairline-dark pt-8">
+      <div>
+        <dt class="font-display text-3xl text-brass-light">2022</dt>
+        <dd class="eyebrow mt-1 !text-stone-light" data-i18n="hero.stat1">с этого года</dd>
+      </div>
+      <div>
+        <dt class="font-display text-3xl text-brass-light">1000+</dt>
+        <dd class="eyebrow mt-1 !text-stone-light" data-i18n="hero.stat2">документов</dd>
+      </div>
+      <div>
+        <dt class="font-display text-3xl text-brass-light">1–2</dt>
+        <dd class="eyebrow mt-1 !text-stone-light" data-i18n="hero.stat3">рабочих дня</dd>
+      </div>
+      <div>
+        <dt class="font-display text-3xl text-brass-light">FZ-LLC</dt>
+        <dd class="eyebrow mt-1 !text-stone-light" data-i18n="hero.stat4">лицензия ОАЭ</dd>
+      </div>
+    </dl>
+
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="bg-paper py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-6">
+    <p class="eyebrow" data-i18n="services.eyebrow">Услуги</p>
+    <h2 class="font-display text-3xl md:text-4xl mt-3 max-w-xl" data-i18n="services.h2">Три способа снять с вас бюрократию</h2>
+
+    <div class="mt-14 md:mt-20 flex md:grid overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar md:grid-cols-3" id="servicesCarousel">
+      <!-- 01 -->
+      <div class="snap-start shrink-0 w-full md:w-auto flex flex-col md:pr-10">
+        <span class="font-display text-3xl text-oxblood">01</span>
+        <h3 class="font-display text-2xl mt-4" data-i18n="services.s1.title">Консульство</h3>
+        <p class="font-display italic text-stone mt-1" data-i18n="services.s1.tag">Все виды консульских действий. Сейчас.</p>
+        <ul class="mt-6 divide-y divide-paper-line text-sm text-stone">
+          <li class="py-2.5" data-i18n="services.s1.f1">Доверенности, паспорта, справки</li>
+          <li class="py-2.5" data-i18n="services.s1.f2">Без ожидания записи</li>
+          <li class="py-2.5" data-i18n="services.s1.f3">Готово за 1–2 рабочих дня</li>
+        </ul>
+        <a href="http://t.me/UAEConsulBot" target="_blank" rel="noopener" class="mt-auto pt-8 inline-flex items-center gap-2 text-oxblood font-semibold text-sm hover:gap-3 transition-all">
+          <span data-i18n="services.s1.cta">Мне это нужно</span><span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <!-- 02 -->
+      <div class="snap-start shrink-0 w-full md:w-auto flex flex-col md:border-l md:border-paper-line md:px-10">
+        <span class="font-display text-3xl text-oxblood">02</span>
+        <h3 class="font-display text-2xl mt-4" data-i18n="services.s2.title">Легализация</h3>
+        <p class="font-display italic text-stone mt-1" data-i18n="services.s2.tag">Дни, не месяцы. Без ненужных деталей.</p>
+        <ul class="mt-6 divide-y divide-paper-line text-sm text-stone">
+          <li class="py-2.5" data-i18n="services.s2.f1">Иностранные документы и документы ОАЭ</li>
+          <li class="py-2.5" data-i18n="services.s2.f2">Готовый документ через пару дней</li>
+          <li class="py-2.5" data-i18n="services.s2.f3">Пошлины и доставка включены</li>
+        </ul>
+        <a href="http://t.me/UAEConsulBot" target="_blank" rel="noopener" class="mt-auto pt-8 inline-flex items-center gap-2 text-oxblood font-semibold text-sm hover:gap-3 transition-all">
+          <span data-i18n="services.s2.cta">Мне это нужно</span><span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <!-- 03 -->
+      <div class="snap-start shrink-0 w-full md:w-auto flex flex-col md:border-l md:border-paper-line md:pl-10">
+        <span class="font-display text-3xl text-oxblood">03</span>
+        <h3 class="font-display text-2xl mt-4" data-i18n="services.s3.title">Нотариат в ОАЭ</h3>
+        <p class="font-display italic text-stone mt-1" data-i18n="services.s3.tag">Вам остаётся только нажать на ссылку в Zoom.</p>
+        <ul class="mt-6 divide-y divide-paper-line text-sm text-stone">
+          <li class="py-2.5" data-i18n="services.s3.f1">Доверенности, резолюции, переводы</li>
+          <li class="py-2.5" data-i18n="services.s3.f2">Оформление под ключ</li>
+          <li class="py-2.5" data-i18n="services.s3.f3">Полностью удалённо, по Zoom</li>
+        </ul>
+        <a href="http://t.me/UAEConsulBot" target="_blank" rel="noopener" class="mt-auto pt-8 inline-flex items-center gap-2 text-oxblood font-semibold text-sm hover:gap-3 transition-all">
+          <span data-i18n="services.s3.cta">Мне это нужно</span><span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Slide indicator dots, mobile carousel only -->
+    <div class="flex md:hidden items-center justify-center gap-2 mt-8" id="servicesDots" role="tablist" aria-label="Услуги">
+      <button type="button" class="services-dot w-2 h-2 rounded-full bg-oxblood" role="tab" aria-selected="true" data-index="0" aria-label="1"></button>
+      <button type="button" class="services-dot w-2 h-2 rounded-full bg-paper-line" role="tab" aria-selected="false" data-index="1" aria-label="2"></button>
+      <button type="button" class="services-dot w-2 h-2 rounded-full bg-paper-line" role="tab" aria-selected="false" data-index="2" aria-label="3"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="process" class="bg-ink text-paper py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-6">
+    <p class="eyebrow eyebrow-light" data-i18n="process.eyebrow">Как это работает</p>
+    <h2 class="font-display text-3xl md:text-4xl mt-3 max-w-xl" data-i18n="process.h2">От запроса до готового документа</h2>
+
+    <ol class="mt-16 grid md:grid-cols-4 gap-10 md:gap-6">
+      <li class="reveal process-step">
+        <svg class="w-8 h-8 text-brass mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H8l-4 4V5z"/></svg>
+        <button type="button" class="process-step-trigger flex items-center gap-1.5 text-left" aria-expanded="false">
+          <h3 class="font-display text-xl" data-i18n="process.p1.title">Напишите нам</h3>
+          <span class="process-step-icon text-brass font-display text-xl leading-none" aria-hidden="true">+</span>
+        </button>
+        <p class="mt-2 text-stone-light text-sm leading-relaxed" data-i18n="process.p1.body">Расскажите, какой документ нужен и куда он должен попасть.</p>
+        <div class="process-step-detail hidden mt-3 pl-3 border-l border-brass/30">
+          <p class="text-stone-light text-sm leading-relaxed" data-i18n="process.p1.detail">Через Telegram или форму на сайте — как удобнее. Опишите в двух словах ситуацию, мы уточним детали и скажем, что делать дальше. Обычно отвечаем в течение рабочего дня.</p>
+        </div>
+      </li>
+      <li class="reveal process-step">
+        <svg class="w-8 h-8 text-brass mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l3 3v15H6V3z"/><path d="M15 3v3h3"/><path d="M12 17v-6m0 0l-2.2 2.2M12 11l2.2 2.2"/></svg>
+        <button type="button" class="process-step-trigger flex items-center gap-1.5 text-left" aria-expanded="false">
+          <h3 class="font-display text-xl" data-i18n="process.p2.title">Пришлите документы</h3>
+          <span class="process-step-icon text-brass font-display text-xl leading-none" aria-hidden="true">+</span>
+        </button>
+        <p class="mt-2 text-stone-light text-sm leading-relaxed" data-i18n="process.p2.body">Скан или оригинал — как удобно. Скажем точно, что понадобится дальше.</p>
+        <div class="process-step-detail hidden mt-3 pl-3 border-l border-brass/30">
+          <p class="text-stone-light text-sm leading-relaxed" data-i18n="process.p2.detail">Для большинства консульских и нотариальных действий достаточно скана или фото. Оригинал может понадобиться для легализации — тогда договоримся, как его передать: лично, курьером или почтой.</p>
+        </div>
+      </li>
+      <li class="reveal process-step">
+        <svg class="w-8 h-8 text-brass mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v2.2M12 18.8V21M4.9 4.9l1.55 1.55M17.55 17.55l1.55 1.55M3 12h2.2M18.8 12H21M4.9 19.1l1.55-1.55M17.55 6.45l1.55-1.55"/></svg>
+        <button type="button" class="process-step-trigger flex items-center gap-1.5 text-left" aria-expanded="false">
+          <h3 class="font-display text-xl" data-i18n="process.p3.title">Мы оформляем</h3>
+          <span class="process-step-icon text-brass font-display text-xl leading-none" aria-hidden="true">+</span>
+        </button>
+        <p class="mt-2 text-stone-light text-sm leading-relaxed" data-i18n="process.p3.body">Перевод, нотариат, легализация, консульские действия — под ключ.</p>
+        <div class="process-step-detail hidden mt-3 pl-3 border-l border-brass/30">
+          <p class="text-stone-light text-sm leading-relaxed" data-i18n="process.p3.detail">Берём на себя переводы, заверения, визиты в инстанции и согласование с консульствами — вы не тратите время на бюрократию и не ездите по учреждениям сами.</p>
+        </div>
+      </li>
+      <li class="reveal process-step">
+        <svg class="w-8 h-8 text-brass mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l3 3v15H6V3z"/><path d="M15 3v3h3"/><path d="M9 14l2 2 4-4.5"/></svg>
+        <button type="button" class="process-step-trigger flex items-center gap-1.5 text-left" aria-expanded="false">
+          <h3 class="font-display text-xl" data-i18n="process.p4.title">Получаете документ</h3>
+          <span class="process-step-icon text-brass font-display text-xl leading-none" aria-hidden="true">+</span>
+        </button>
+        <p class="mt-2 text-stone-light text-sm leading-relaxed" data-i18n="process.p4.body">С доставкой, без очередей и личного присутствия.</p>
+        <div class="process-step-detail hidden mt-3 pl-3 border-l border-brass/30">
+          <p class="text-stone-light text-sm leading-relaxed" data-i18n="process.p4.detail">Готовый документ отправляем курьером или почтой — в ОАЭ и за рубеж. При необходимости пришлём скан заранее, чтобы вы могли начать пользоваться документом, не дожидаясь доставки.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="bg-paper py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-[minmax(0,360px)_1fr] gap-12 md:gap-20 items-start">
+
+    <div class="reveal">
+      <div class="aspect-[4/5] w-full max-w-sm border border-paper-line relative overflow-hidden" id="founderPhotoBox">
+        <img src="assets/ceo.jpg" alt="Кирилл Григорьев, основатель Asseal" class="absolute inset-0 w-full h-full object-cover object-top" />
+      </div>
+      <p class="mt-4 font-mono text-[0.65rem] tracking-widest text-oxblood" data-i18n="about.photoCaption">ОСНОВАТЕЛЬ</p>
+    </div>
+
+    <div>
+      <p class="eyebrow" data-i18n="about.eyebrow">О нас</p>
+      <h2 class="font-display text-3xl md:text-4xl mt-3" data-i18n-html="about.h2">
+        Asseal создан <span class="text-oxblood">профессиональным юристом</span> с 15-летним опытом.
+      </h2>
+
+      <p class="mt-8 text-lg leading-relaxed" data-i18n-html="about.p1">
+        Меня зовут <strong>Кирилл Григорьев</strong>.
+      </p>
+      <p class="mt-4 text-stone leading-relaxed max-w-2xl" data-i18n="about.p2">
+        Я учился в МГУ, ВШЭ, University of California Berkeley, University of London, Harvard Law School, Harvard Business School и MIT, работал в крупнейших российских и международных компаниях.
+      </p>
+      <p class="mt-6 font-display italic text-xl text-ink max-w-2xl" data-i18n="about.p4">
+        Я лично отвечаю за результат работы по каждому клиенту — вы всегда можете обратиться ко мне напрямую.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST / EXPERTISE ============ -->
+<section class="bg-paper-dim py-24 md:py-32 border-y border-paper-line">
+  <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-[1fr_auto] gap-16 items-center">
+    <div class="max-w-2xl">
+      <p class="eyebrow" data-i18n="trust.eyebrow">Знания, опыт и технологии</p>
+      <h2 class="font-display text-3xl md:text-4xl mt-3" data-i18n="trust.h2">Лицензированная в ОАЭ юридическая фирма</h2>
+      <p class="mt-6 text-stone leading-relaxed" data-i18n="trust.body">
+        С 2022 года мы удостоверили тысячи документов для десятков стран на всех континентах. Профессиональные юристы с многолетним опытом глубоко знают тонкости и подводные камни бюрократических процедур, учитывая практические нюансы, которых нет в законах. Вам остаётся поставить задачу и получить результат.
+      </p>
+      <a href="#contact" class="inline-block mt-8 btn-primary" data-i18n="trust.cta">Направить заявку</a>
+    </div>
+
+    <dl class="grid grid-cols-2 lg:grid-cols-1 gap-8 lg:gap-10 lg:w-64 lg:border-l lg:border-paper-line lg:pl-10">
+      <div class="hairline lg:border-t-0 pt-6 lg:pt-0">
+        <dt class="font-display text-4xl text-oxblood">2022</dt>
+        <dd class="eyebrow mt-2" data-i18n="trust.stat1">год основания</dd>
+      </div>
+      <div class="hairline lg:border-t-0 pt-6 lg:pt-0">
+        <dt class="font-display text-4xl text-oxblood">1000+</dt>
+        <dd class="eyebrow mt-2" data-i18n="trust.stat2">документов</dd>
+      </div>
+      <div class="hairline lg:border-t-0 pt-6 lg:pt-0 col-span-2 lg:col-span-1">
+        <dt class="font-display text-4xl text-oxblood">10+</dt>
+        <dd class="eyebrow mt-2" data-i18n="trust.stat3">стран и континентов</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="bg-paper py-24 md:py-32">
+  <div class="max-w-3xl mx-auto px-6">
+    <p class="eyebrow" data-i18n="faq.eyebrow">Вопросы</p>
+    <h2 class="font-display text-3xl md:text-4xl mt-3" data-i18n="faq.h2">Прежде чем вы спросите</h2>
+
+    <div class="mt-12 divide-y divide-paper-line hairline" id="faqList">
+      <details class="group py-6">
+        <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+          <span class="font-display text-lg md:text-xl" data-i18n="faq.q1.q">Сколько времени занимает оформление?</span>
+          <span class="shrink-0 text-brass font-display text-2xl transition-transform group-open:rotate-45">+</span>
+        </summary>
+        <p class="mt-4 text-stone leading-relaxed pr-8" data-i18n="faq.q1.a">Консульские действия обычно занимают один-два рабочих дня. Сроки легализации и нотариальных процедур зависят от типа документа и страны назначения — точный срок назовём после того, как посмотрим на ваш случай.</p>
+      </details>
+      <details class="group py-6">
+        <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+          <span class="font-display text-lg md:text-xl" data-i18n="faq.q2.q">Нужно ли приезжать в ОАЭ лично?</span>
+          <span class="shrink-0 text-brass font-display text-2xl transition-transform group-open:rotate-45">+</span>
+        </summary>
+        <p class="mt-4 text-stone leading-relaxed pr-8" data-i18n="faq.q2.a">Нет. Большинство процедур, включая нотариальные, можно провести удалённо — например, по видеосвязи в Zoom.</p>
+      </details>
+      <details class="group py-6">
+        <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+          <span class="font-display text-lg md:text-xl" data-i18n="faq.q3.q">Работаете ли вы с документами не из ОАЭ?</span>
+          <span class="shrink-0 text-brass font-display text-2xl transition-transform group-open:rotate-45">+</span>
+        </summary>
+        <p class="mt-4 text-stone leading-relaxed pr-8" data-i18n="faq.q3.a">Да, мы работаем как с иностранными документами, так и с документами ОАЭ для третьих стран.</p>
+      </details>
+      <details class="group py-6">
+        <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+          <span class="font-display text-lg md:text-xl" data-i18n="faq.q4.q">Сколько это стоит?</span>
+          <span class="shrink-0 text-brass font-display text-2xl transition-transform group-open:rotate-45">+</span>
+        </summary>
+        <p class="mt-4 text-stone leading-relaxed pr-8" data-i18n="faq.q4.a">Зависит от типа документа, срочности и стран, участвующих в легализации. Пришлите детали — посчитаем точную стоимость и включим в неё пошлины, переводы и доставку.</p>
+      </details>
+      <details class="group py-6">
+        <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+          <span class="font-display text-lg md:text-xl" data-i18n="faq.q5.q">Как быстро вы отвечаете?</span>
+          <span class="shrink-0 text-brass font-display text-2xl transition-transform group-open:rotate-45">+</span>
+        </summary>
+        <p class="mt-4 text-stone leading-relaxed pr-8" data-i18n="faq.q5.a">Напишите в Telegram или оставьте заявку на сайте — отвечаем оперативно, по ключевым вопросам на связи лично Кирилл.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="bg-ink text-paper py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+    <div>
+      <p class="eyebrow eyebrow-light" data-i18n="contact.eyebrow">Контакты</p>
+      <h2 class="font-display text-3xl md:text-4xl mt-3" data-i18n-html="contact.h2">Остались вопросы?<br/>Напишите нам.</h2>
+      <p class="mt-6 text-stone-light leading-relaxed max-w-md" data-i18n="contact.body">
+        Выберите удобный способ связи — ответим лично и по существу.
+      </p>
+
+      <div class="mt-10 flex gap-3" role="tablist" aria-label="Способ связи">
+        <button type="button" id="channelTelegram" class="btn-primary !py-2.5" role="tab" aria-selected="true" data-i18n="contact.channelTelegram">Telegram</button>
+        <button type="button" id="channelEmail" class="btn-ghost-dark !py-2.5" role="tab" aria-selected="false" data-i18n="contact.channelEmail">Email</button>
+      </div>
+
+      <dl class="mt-16 hairline-dark pt-8 space-y-3 font-mono text-sm text-stone-light">
+        <div class="flex gap-3"><dt class="text-brass">TG</dt><dd><a href="https://t.me/asseal_ae" class="hover:text-paper" target="_blank" rel="noopener">t.me/asseal_ae</a></dd></div>
+        <div class="flex gap-3"><dt class="text-brass">EMAIL</dt><dd><a href="mailto:kirill@asseal.ae" class="hover:text-paper">kirill@asseal.ae</a></dd></div>
+        <div class="flex gap-3"><dt class="text-brass">UAE</dt><dd data-i18n="contact.address">S01-G01 Shed No.01 - TP Al Hamra FZ, Al Hamra Industrial Free Zone, RAK</dd></div>
+      </dl>
+    </div>
+
+    <div>
+      <!-- Telegram panel -->
+      <div id="panelTelegram" class="border border-brass/30 p-8 md:p-10">
+        <p class="font-display text-2xl" data-i18n="contact.tgTitle">Быстрее всего — в Telegram</p>
+        <p class="mt-3 text-stone-light leading-relaxed" data-i18n="contact.tgBody">Напишите нам напрямую, опишите задачу — ответим в течение рабочего дня.</p>
+        <a href="https://t.me/asseal_ae" target="_blank" rel="noopener" class="inline-block mt-6 btn-primary" data-i18n="contact.tgCta">Открыть Telegram</a>
+      </div>
+
+      <!-- Email form panel -->
+      <form id="panelEmail" class="hidden border border-brass/30 p-8 md:p-10 space-y-5">
+        <div>
+          <label for="fName" class="eyebrow" data-i18n="contact.form.name">ФИО</label>
+          <input id="fName" name="name" type="text" required class="mt-2 w-full bg-transparent border-b border-paper-line py-2 focus:border-brass outline-none" />
+        </div>
+        <div>
+          <label for="fEmail" class="eyebrow" data-i18n="contact.form.email">Email</label>
+          <input id="fEmail" name="email" type="email" required class="mt-2 w-full bg-transparent border-b border-paper-line py-2 focus:border-brass outline-none" />
+        </div>
+        <div>
+          <label for="fPhone" class="eyebrow" data-i18n="contact.form.phone">Телефон</label>
+          <input id="fPhone" name="phone" type="tel" class="mt-2 w-full bg-transparent border-b border-paper-line py-2 focus:border-brass outline-none" />
+        </div>
+        <div>
+          <label for="fMsg" class="eyebrow" data-i18n="contact.form.message">Сообщение</label>
+          <textarea id="fMsg" name="message" rows="3" required class="mt-2 w-full bg-transparent border-b border-paper-line py-2 focus:border-brass outline-none resize-none"></textarea>
+        </div>
+        <button type="submit" class="btn-primary" data-i18n="contact.form.submit">Отправить</button>
+        <p class="text-xs text-stone-light" data-i18n="contact.form.note">Откроется письмо в вашей почте, адресованное нам напрямую.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ink text-stone-light py-14 border-t border-brass/15">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row md:items-end justify-between gap-8">
+    <div>
+      <img src="assets/logo.png" alt="Asseal" class="h-5 w-auto opacity-90 mb-4" style="filter: invert(1) brightness(1.6);" />
+      <p class="font-mono text-xs leading-relaxed max-w-sm" data-i18n="footer.legal">
+        Asseal Legal Consultancy FZ-LLC<br/>
+        S01-G01 Shed No.01 - TP Al Hamra FZ, Al Hamra Industrial Free Zone, RAK, United Arab Emirates
+      </p>
+    </div>
+    <div class="font-mono text-xs">
+      <p data-i18n="footer.copyright">© 2023–2026 Asseal Legal Consultancy FZ-LLC</p>
+      <a href="https://t.me/asseal_ae" target="_blank" rel="noopener" class="text-brass-light hover:text-brass">t.me/asseal_ae</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

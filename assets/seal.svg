@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor">
+  <circle cx="60" cy="60" r="54" stroke-width="1.4"/>
+  <circle cx="60" cy="60" r="46" stroke-width="0.9"/>
+  <g stroke-width="1.4">
+    <path d="M60 4 v9 M60 107 v9 M4 60 h9 M107 60 h9"/>
+    <path d="M21.5 21.5 l6.4 6.4 M92.1 92.1 l6.4 6.4 M98.5 21.5 l-6.4 6.4 M27.9 92.1 l-6.4 6.4"/>
+  </g>
+  <g stroke-width="0.8" stroke-dasharray="1 5">
+    <circle cx="60" cy="60" r="50"/>
+  </g>
+  <path id="sealTextPath" d="M 60,23 A 37,37 0 1 1 60,97 A 37,37 0 1 1 60,23" fill="none" stroke="none"/>
+  <text font-family="IBM Plex Mono, monospace" font-size="8" letter-spacing="3.2" fill="currentColor" stroke="none">
+    <textPath href="#sealTextPath" startOffset="50%" text-anchor="middle">ASSEAL · LEGAL · UAE</textPath>
+  </text>
+  <text x="60" y="73" font-family="Fraunces, serif" font-weight="600" font-size="28" text-anchor="middle" fill="currentColor" stroke="none">A</text>
+</svg>

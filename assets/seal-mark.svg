@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor">
+  <circle cx="24" cy="24" r="21" stroke-width="2"/>
+  <circle cx="24" cy="24" r="15.5" stroke-width="1"/>
+  <g stroke-width="2">
+    <path d="M24 1.5 v4.5 M24 42 v4.5 M1.5 24 h4.5 M42 24 h4.5"/>
+  </g>
+  <text x="24" y="31" font-family="Fraunces, serif" font-weight="600" font-size="17" text-anchor="middle" fill="currentColor" stroke="none">A</text>
+</svg>
